@@ -20,3 +20,5 @@ ipython notebook
 ```
 
 IPython Notebook utiliza [Markdown](http://daringfireball.net/projects/markdown/syntax)
+Algunos tutoriales de IPython Notebook
+* http://opentechschool.github.io/python-data-intro/core/notebook.html
