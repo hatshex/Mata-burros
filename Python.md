@@ -18,3 +18,5 @@ Una vez instalado y/o actualizado Anaconda, utilizaremos IPython Notebook:
 ```
 ipython notebook
 ```
+
+IPython Notebook utiliza [Markdown](http://daringfireball.net/projects/markdown/syntax)
