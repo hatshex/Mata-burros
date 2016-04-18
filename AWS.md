@@ -2,6 +2,9 @@
 Estamos usando ubuntu como sistema operativo
 
 Instalar AWS CLI con el bundle installer
+* Descargar el instalador, utilizando curl, tmb puedes utilizar el comando wget
+* Descomprimir el paquete de awscli-bundle.zip
+* Ejecutar el instalador
 
 ``` shell
 $ sudo curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
