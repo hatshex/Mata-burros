@@ -119,7 +119,7 @@ tr '"' ' ' > instancias
 ```shell
 $ ssh -i ~/.ssh/key.pem ec2-54-201-99-166.us-west-2.compute.amazonaws.com
 ```
-- **_ El parámetro ec2-54-201-99-166.us-west-2.compute.amazonaws.com es el Public DNS 
+**_ El parámetro ec2-54-201-99-166.us-west-2.compute.amazonaws.com es el Public DNS_**
 * Ahora si... estamos dentro de nuestra ec2
 ```shell
 Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-74-generic x86_64)
@@ -155,5 +155,18 @@ Mmmm y cómo obtengo la lista de buckets???
 ```shell
 aws s3 ls
 ```
+## No olviden apagar las instancias!!!!! 
 
+### Apagar las instancias desde cli??
+```shell
+$ sudo ec2-stop-instances i-10a64379
+```
+* Debes tener instalado el ec2-api-tools
+```shell 
+$ sudo apt-get install ec2-api-tools
+```
 
+### Y si quiero crear varias instancias desde cli? [Create Instance](http://docs.aws.amazon.com/cli/latest/reference/opsworks/create-instance.html)
+```shell 
+$ aws opsworks --region us-east-1 create-instance --stack-id 935450cc-61e0-4b03-a3e0-160ac817d2bb --layer-ids 5c8c272a-f2d5-42e3-8245-5bf3927cb65b --hostname myinstance1 --instance-type m1.large --os "Amazon Linux"
+```
