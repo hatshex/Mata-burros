@@ -44,7 +44,7 @@ Desplegará el manual del comando aws, para salir le ponen q
 - Clic en Users
 - Clic en Create New User
 - Agregar el o los usuarios que requieren, por ejemplo: hatshex-dpa
-- Una vez creado, descarguen las credenciales(Clic en Show Credentials) y descargará el archivo "credentials.csv" ** Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...**
+- Una vez creado, descarguen las credenciales(Clic en Show Credentials) y descargará el archivo "credentials.csv" **Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...**
 - En este momento, tenemos el usuario peeeeeerrroooo no tiene permisos de hacer ni m....
 
 ### Agregamos roles y permisos [Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html)
@@ -54,12 +54,20 @@ Desplegará el manual del comando aws, para salir le ponen q
 * Seleccionas tantos permisos necesites y clic en Attach Policy
 * Ya tenemos el usuario listo.
 
-### Ahhhh un último paso... generar las Access Keys 
-Mas info en [Managing Access Keys for IAM Users](ttp://docs.aws.amazon.com/console/iam/access-keys)
-* Clic en el nombre del usuario
-* Seleccionar la pestaña Security Credentials
-* Clic en Access Keys
-* Clic Create Access Keys
+### Crear una máquinita EC2 en AWS
+* Clic Create Instance
+* Launch Instance
+* Choose an Amazon Machine Image (AMI)
+  - Seleccionamos -> Ubuntu Server 14.04 LTS (HVM)
+  - Seleccionamos -> t2.micro -> Clic en Review & Launch
+  - En la pantalla que despliega, es importante revisar que tengamos activado el protocolo SSH que nos sirve para conectarnos.
+  - Clic en Launch
+  - Desplegará una ventana para generar las keys pair (Llave pública y llave privada)
+  - Create a new pair -> Escribir el nombre
+  ó
+  - Choose key pair -> Seleccionar el archivo .pem previamente creado
+  - Descargar el archivo *.pem **Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...**
+  - Clic Launch
 
 ### Ahora si, aws desde la consola de línea de comandos
 * Abran una terminal
@@ -71,14 +79,6 @@ AWS Secret Access Key [None]: ** Aquí van las credenciales que descargaron
 Default region name [None]: us-west-2
 Default output format [None]: json
 ```
-
-### Crear una máquinita EC2 en AWS
-* Clic Create Instance
-* Launch Instance
-* Choose an Amazon Machine Image (AMI)
-  - Seleccionamos -> Ubuntu Server 14.04 LTS (HVM)
-  - Seleccionamos -> t2.micro -> Clic en Review & Launch
-  - En la pantalla que despliega, es importante revisar que tengamos activado el protocolo SSH que nos sirve para conectarnos.
 
 ``` shell
 chdmod 4000 *my-file*.pem
