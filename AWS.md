@@ -115,7 +115,33 @@ aws ec2 describe-instances | \
 jq '.Reservations[].Instances[].PublicDnsName' | \
 tr '"' ' ' > instancias
 ```
+* Conectándote a tu máquina ec2 desde ssh 
+```shell
+ssh -i ~/.ssh/key.pem ec2-54-201-99-166.us-west-2.compute.amazonaws.com
+```
+- **_ El parámetro ec2-54-201-99-166.us-west-2.compute.amazonaws.com es el Public DNS 
+* Ahora si... estamos dentro de nuestra ec2
+```shell
+Welcome to Ubuntu 14.04.3 LTS (GNU/Linux 3.13.0-74-generic x86_64)
 
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Mon Apr 18 21:33:05 UTC 2016
+
+  System load: 0.0               Memory usage: 5%   Processes:       81
+  Usage of /:  10.0% of 7.74GB   Swap usage:   0%   Users logged in: 0
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+
+Last login: Mon Apr 18 21:18:34 2016 from 159.16.249.211
+ubuntu@ip-172-31-45-18:~$ 
+
+```
 ## Y el storage???? S3
 Ah... creamos un bucket en s3 [Using High-Level s3 Commands with the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html)
 ```shell
