@@ -1,5 +1,5 @@
 # Tuto para instalar AWS CLI y no morir en el intento
-Solamente para Ubuntu
+Solamente para Ubuntu, para mejor referencia [Installing the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os)
 
 ## Instalar AWS CLI con el bundle installer
 * Descargar el instalador, utilizando curl, tmb puedes utilizar el comando wget
