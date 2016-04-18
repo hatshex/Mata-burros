@@ -117,7 +117,7 @@ tr '"' ' ' > instancias
 ```
 
 ## Y el storage???? S3
-Ah... creamos un bucket en s3
+Ah... creamos un bucket en s3 [Using High-Level s3 Commands with the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html)
 ```shell
 aws s3 mb s3://bucket-name
 ```
@@ -130,7 +130,4 @@ Mmmm y cómo obtengo la lista de buckets???
 aws s3 ls
 ```
 
-Using High-Level s3 Commands with the AWS Command Line Interface
-``` shell
-chdmod 4000 *my-file*.pem
-```
+
