@@ -1,6 +1,8 @@
 # Tuto para instalar AWS CLI y no morir en el intento
 Solamente para Ubuntu, para mejor referencia [Installing the AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os)
 
+# Lo primero es tener instalado el aws cli
+
 ## Instalar AWS CLI con el bundle installer
 * Descargar el instalador, utilizando curl, tmb puedes utilizar el comando wget
 * Descomprimir el paquete de awscli-bundle.zip
@@ -28,6 +30,11 @@ sudo pip install awscli
 $ sudo pip install awscli
 ```
 
+## Para verificar que este instalado 
+```shell
+$ aws help
+```
+Desplegará el manual del comando aws, para salir le ponen q
 
 Modificando permisos al archivo .pem
 ``` shell
