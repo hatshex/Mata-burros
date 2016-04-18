@@ -66,8 +66,9 @@ Desplegará el manual del comando aws, para salir le ponen q
   - Create a new pair -> Escribir el nombre
   ó
   - Choose key pair -> Seleccionar el archivo .pem previamente creado
-  - Descargar el archivo *.pem **Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...**
+  - Descargar el archivo .pem **Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...**
   - Clic Launch
+  - Si regresamos a la pantalla de Instances, veremos que ya está la máquinita prendida.
 
 ### Ahora si, aws desde la consola de línea de comandos
 * Abran una terminal
@@ -79,7 +80,57 @@ AWS Secret Access Key [None]: ** Aquí van las credenciales que descargaron
 Default region name [None]: us-west-2
 Default output format [None]: json
 ```
+* Una vez configurado el aws cli, movemos el archivo .pem a la carpeta ~/.ssh y le cambiamos los permisos. Si no existe la carpeta hay que crearla.... la expresión ~/ se refiere a la carpeta de tu usuario.
 
+``` shell
+$ mkdir /home/hatshex/.ssh
+$ mv /home/hatshex/key.pem /home/hatshex/.ssh
+$ chdmod 4000 key.pem
+```
+* Abrimos o creamos el archivo config, dentro de la carpeta ~/.ssh/ y pegamos la siguiente configuración. **Utilizamos el usuario ubuntu, pq es el que se crea por default en la instancia de ec2 que creamos previamente.**
+```shell
+$ nano ~/.ssh/config
+```
+```shell
+Host *.amazonaws.com
+  IdentityFile ~/.ssh/key.pem
+  User ubuntu
+```
+* Ahora si, podemos probar que se conecte a la máquina de ec2 en amazon
+```shell
+$aws ec2 describe-instances | \
+jq '.Reservations[].Instances[] |  {PublicDnsName, InstanceId, PublicIpAddress}'
+```
+* Tendremos la siguiente salida
+```shell
+{
+  "PublicDnsName": "ec2-54-213-74-99.us-west-2.compute.amazonaws.com",
+  "InstanceId": "i-0ca605cb",
+  "PublicIpAddress": "54.213.74.99"
+}
+```
+* Guardamos la info en el archivo instancias
+```shell
+aws ec2 describe-instances | \
+jq '.Reservations[].Instances[].PublicDnsName' | \
+tr '"' ' ' > instancias
+```
+
+## Y el storage???? S3
+Ah... creamos un bucket en s3
+```shell
+aws s3 mb s3://bucket-name
+```
+Y si me equivoqué??
+```shell
+aws s3 rb s3://bucket-name --force
+```
+Mmmm y cómo obtengo la lista de buckets???
+```shell
+aws s3 ls
+```
+
+Using High-Level s3 Commands with the AWS Command Line Interface
 ``` shell
 chdmod 4000 *my-file*.pem
 ```
