@@ -36,6 +36,15 @@ $ aws help
 ```
 Desplegará el manual del comando aws, para salir le ponen q
 
+## Una vez que tenemos listo el ambiente, entramos a la consola de AWS [AWS Management Console](https://aws.amazon.com/console/)
+
+### Creamos un usuario
+* Security & Identify
+- Clic en Identify & Access Management (IAM)
+- Clic en Users
+- Clic en Create New User
+- Agregar el o los usuarios que requieren, por ejemplo: hatshex-dpa
+- Una vez creado, descarguen las credenciales
 Modificando permisos al archivo .pem
 ``` shell
 chdmod 4000 *my-file*.pem
