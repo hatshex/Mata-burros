@@ -44,7 +44,15 @@ Desplegará el manual del comando aws, para salir le ponen q
 - Clic en Users
 - Clic en Create New User
 - Agregar el o los usuarios que requieren, por ejemplo: hatshex-dpa
-- Una vez creado, descarguen las credenciales
+- Una vez creado, descarguen las credenciales(Show Credentials) ** Nunca nunca nunca pierdan este archivo, y jamás las publiquen en su github o algún otro repositorio...
+- En este momento, tenemos el usuario peeeeeerrroooo no tiene permisos de hacer ni m....
+- 
+### Agregamos roles y permisos [Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html)
+* Clic en el usuario
+* Clic pestaña permissions
+* Clic en Attach Policy
+* Seleccionas tantos permisos necesites y clic en Attach Policy
+
 Modificando permisos al archivo .pem
 ``` shell
 chdmod 4000 *my-file*.pem
