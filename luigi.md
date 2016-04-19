@@ -8,3 +8,5 @@ sudo docker-compose build --force-rm --no-cache luigi_worker
 Solamente levantamos postgres spark y luigi
 docker-compose up -d postgres spark_worker luigid
 ```
+
+
