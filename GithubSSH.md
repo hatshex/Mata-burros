@@ -15,7 +15,7 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"
   Enter passphrase (empty for no passphrase): [Type a passphrase]
   Enter same passphrase again: [Type passphrase again]
 ```
-* Ahora revisamos que el agente esté activo
+* Ahora revisamos que el ssh-agent esté activo
 ```shell
 $ eval "$(ssh-agent -s)"
 Agent pid 59566
@@ -28,4 +28,8 @@ $ ssh-add ~/.ssh/id_rsa
 ```shell
 $ ssh-add -l
 2048 12:34:56:79:90:12:34:56:78:90:12:34:56:78:90:12 /home/**TuUsuario**/.ssh/id_rsa (RSA)
+```
+* Cómo se clona el repositorio de github, usando los certificados??
+```shell
+$ git clone git@github.com:hatshex\data-product-architecture.git
 ```
