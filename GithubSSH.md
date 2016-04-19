@@ -20,7 +20,7 @@ $ ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"
 $ eval "$(ssh-agent -s)"
 Agent pid 59566
 ```
-* Agregamos el archivo id_rsa al agente
+* Agregamos el archivo de la llave privada(id_rsa) al agente
 ```shell
 $ ssh-add ~/.ssh/id_rsa
 ```
@@ -29,6 +29,12 @@ $ ssh-add ~/.ssh/id_rsa
 $ ssh-add -l
 2048 12:34:56:79:90:12:34:56:78:90:12:34:56:78:90:12 /home/**TuUsuario**/.ssh/id_rsa (RSA)
 ```
+* Imprimimos en pantalla la llave pública
+```shell
+$ cat ~/.ssh/id_rsa.pub
+```
+* Copiamos la salida anterior y la agregamos en el perfil de github, Settings/SSH keys and GPG keys/New SSH Keys
+
 * Cómo se clona el repositorio de github, usando los certificados??
 ```shell
 $ git clone git@github.com:hatshex\data-product-architecture.git
