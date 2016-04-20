@@ -1,4 +1,17 @@
-#Funciones más usuales en emacs
+# Emacs editor
+* Instalando emacs editor
+```zsh
+$ sudo apt-get install emacs
+```
+* Para lanzarlo desde la terminal se utiliza
+```zsh
+$ emacs -nw
+```
+* Si no quieres estar tecleando esto, crea un alias
+```zsh
+$ echo alias emacs="emacs -nw" >> ~/.bashrc
+```
+*Funciones más usuales en emacs
 
 * Salir C-x C-c
 * Abrir archivo: C-x C-f
