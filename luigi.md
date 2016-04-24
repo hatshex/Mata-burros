@@ -1,3 +1,5 @@
+(images/LuigiETL.png)
+
 Modificamos el archivo de Dockerfile que está en la carpeta producto/ambiente/luigi/luigi_worker
 
 Luego volvemos a construir el docker-compose
