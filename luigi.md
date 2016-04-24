@@ -1,4 +1,4 @@
-(images/LuigiETL.png)
+![Esquema del archivo etl.py](images/LuigiETL.png)
 
 Modificamos el archivo de Dockerfile que está en la carpeta producto/ambiente/luigi/luigi_worker
 
