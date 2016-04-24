@@ -1,7 +1,7 @@
 # Quién es Luigi??? El compañero de Mario Bros???
 Exacto.. es un plomero que es amigo de Mario Bross... Luigi arregla las tuberías (pipeline)
 
-En el ambiente de Big Data, Luigi es un orquestador... **WTF??** mmm imaginen que tienen muchas tareas dependientes unas de otras, y tienen muchos trabajadores (luigis workers) dispuestos a ayudar..... Entonces... Luigi es quién les distribuye el trabajo, conforme se vayan desocupando y lleva el control de los procesos, las tareas y los trabajadores......
+En el ambiente de Big Data, Luigi es un orquestador... **WTF??** mmm imaginen que tienen muchas tareas dependientes unas de otras, y tienen muchos trabajadores (luigis workers) dispuestos a ayudar..... Entonces... Luigi (Master, osea papá de los pollitos) es quién les distribuye el trabajo, conforme se vayan desocupando y lleva el control de los procesos, las tareas y los trabajadores......
 Ah... por cierto... fue desarrollado por **Spotify**
 
 Luigi trabaja básicamente con Target, Task y Parameters...
@@ -34,6 +34,8 @@ class AggregateUFOsByState(SparkSubmitTask):
     def output(self):
         return luigi.s3.S3Target(self.bucket + '/ufo/etl/aggregated')
 ```
+En el código anterior, en lugar de tener el método Run, sacamos el código a ejecutarse y lo colocamos en el archivo aggregated_by_state.py , y eso cómo para qué?? ah.. para que se vea bonito ah.. just kidding, además de que se ve mas limpio el código, nos permite hacer cambios rápidos... por ejemplo, si queremos modificar algo, bastaría con modificar el archivo aggregated_by_state.py, de lo contrario tendríamos que detener el luigi, modificar el archivo principal, en nuestro caso etl.py y volver a arrancar a luigi... es una pachanga, no???
+
 Supongamos que queremos obtener guardarl el top ten de avistamiento de ufos por estados en una base de datos de postgres, para lo cuál tenemos las siguientes tareas:
 * Leer los archivos con los avistamientos -> ReadUFOS()
 * Agrupamos la información por estados -> AggregatedUFOSbySate()
@@ -60,7 +62,7 @@ Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
 
 * Ejecutar el contenedor de luigi
 * Actualizamos el repo
-* Levantar spark
+* Levantamos spark
 ```zsh
 $ docker exec -it ambiente_luigi_worker_1 bin/bash
 $ git pull
