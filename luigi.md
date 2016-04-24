@@ -9,7 +9,7 @@ $ sudo docker-compose build --force-rm --no-cache luigi_worker
 Solamente levantamos postgres spark y luigi
 ```shell docker-compose up -d postgres spark_worker luigid```
 
-Dentro de Luigi_worker, si queremos probar nuestro ETL
+Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
 
 * Ejecutar el contenedor de luigi
 * Actualizamos el repo
@@ -32,4 +32,11 @@ $ avistamientos = sqlCtx.read.format('com.databricks.spark.csv')\
                                .options(header='true', inferSchema='true', delimiter='\t')\
                                .load(s3n:\\mybucket\ufo\raw)
 
+```
+
+Ah... pero y cómo sabemos que Luigi también está funcionando???
+* Salimos de spark Ctrl + c
+* python -m luigi --module **nombre del archivo con el etl** **Clase que queremos probar**
+```zsh
+$ python -m luigi --module etl ReadUFOS
 ```
