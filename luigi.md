@@ -5,11 +5,11 @@ En el ambiente de Big Data, Luigi es un orquestador... **WTF??** mmm imaginen qu
 
 Luigi trabaja básicamente con Target, Task y Parameters...
 * Target -> Lugares de almacenamiento para extraer o resguardar la información, pueden ser locales, s3(amazon), hadoop, etc...
-* Task -> Son las encargadas de ejecutar y generalmente tiene 3 métodos:
-- Input
-- Output
-- Run -> Aquí es donde sucede la magia.... si si si... osea aquí va el código que se ejecuta
-- Require
+* Task -> Son las encargadas de ejecutar y generalmente tiene los métodos: 
+ - Input -> Es la salida(output) de la tarea anterior ( se define en la sección de require)
+ - Output -> El archivo de salida de la tarea, generalmente se define un target.
+ - Run -> Aquí es donde sucede la magia.... si si si... osea aquí va el código que se ejecuta
+ - Require -> Requiere una tarea anterior... 
 ``` python
 class AggregateUFOsByState(SparkSubmitTask):
     sighting = luigi.DateParameter(default=datetime.date.today())
@@ -33,9 +33,17 @@ class AggregateUFOsByState(SparkSubmitTask):
     def output(self):
         return luigi.s3.S3Target(self.bucket + '/ufo/etl/aggregated')
 ```
+Supongamos que queremos obtener guardarl el top ten de avistamiento de ufos por estados en una base de datos de postgres, para lo cuál tenemos las siguientes tareas:
+* Leer los archivos con los avistamientos -> ReadUFOS()
+* Agrupamos la información por estados -> AggregatedUFOSbySate()
+* Sacamos el top ten de cada uno -> TopTenStates
+* Guardamos el top ten en una bd de postgres -> TopStatesToDatabase()
+
+En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos de la última función a la primera.
 
 ![Esquema del archivo etl.py](images/LuigiETL.png)
 
+# Ahhh y cómo se puede probar?? cómo se ejecuta???
 Modificamos el archivo de Dockerfile que está en la carpeta producto/ambiente/luigi/luigi_worker
 
 Luego volvemos a construir el docker-compose
