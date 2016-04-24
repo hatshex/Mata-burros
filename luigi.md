@@ -16,7 +16,8 @@ Dentro de Luigi_worker, si queremos probar nuestro ETL
 ```zsh
 $ docker exec -it ambiente_luigi_worker_1 bin/bash
 $ git pull
-$ pyspark --master spark:\\master:7077
+$ pyspark --master spark:\\master:7077 -- packages com.amazonaws:aws-java-sdk-pom:1.10.34,org.apache.hadoop:hadoop-aws:2.6.0,com.databricks:spark-csv_2.11:1.4.0
 ```
+**_La primera vez se tarda pq los paquetes se instalan por primera vez en el cluster_**
 
-Ojo si ejecutamos solamente ```$ pyspark ```nos conecta a un minicluster de la máquina de Luigi, y no queremos hacer pruebas con eso.. queremos que corra en el verdadero cluster de spark.
+**Ojo ->** si ejecutamos solamente ```shell $ pyspark ```nos conecta a un minicluster de la máquina de Luigi, y no queremos hacer pruebas con eso.. queremos que corra en el verdadero cluster de spark.
