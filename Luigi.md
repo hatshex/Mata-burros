@@ -66,7 +66,7 @@ Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
 * Actualizamos el repo
 * Levantamos spark
 ```zsh
-$ docker exec -it ambiente_luigi_worker_1 bin/bash
+$ docker exec -it ambiente_luigi_worker_1 /bin/bash
 $ git pull
 ```
 **Ojo ->** si ejecutamos solamente ```shell $ pyspark ```nos conecta a un minicluster de la máquina de Luigi, y no queremos hacer pruebas con eso.. queremos que corra en el verdadero cluster de spark.
