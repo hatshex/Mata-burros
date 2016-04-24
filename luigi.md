@@ -1,3 +1,39 @@
+# Quién es Luigi??? El compañero de Mario Bros???
+Exacto.. es un plomero que es amigo de Mario Bross... Luigi arregla las tuberías (pipeline)
+
+En el ambiente de Big Data, Luigi es un orquestador... **WTF??** mmm imaginen que tienen muchas tareas dependientes unas de otras, y tienen muchos trabajadores (luigis workers) dispuestos a ayudar..... Entonces... Luigi es quién les distribuye el trabajo, conforme se vayan desocupando y lleva el control de los procesos, las tareas y los trabajadores......
+
+Luigi trabaja básicamente con Target, Task y Parameters...
+* Target -> Lugares de almacenamiento para extraer o resguardar la información, pueden ser locales, s3(amazon), hadoop, etc...
+* Task -> Son las encargadas de ejecutar y generalmente tiene 3 métodos:
+- Input
+- Output
+- Run -> Aquí es donde sucede la magia.... si si si... osea aquí va el código que se ejecuta
+- Require
+``` python
+class AggregateUFOsByState(SparkSubmitTask):
+    sighting = luigi.DateParameter(default=datetime.date.today())
+    bucket = configuration.get_config().get('etl','bucket')
+
+    def requires(self):
+        return ReadUFOs()
+
+    @property
+    def name(self):
+        return 'AggregateUFOsBystate'
+
+    def app_options(self):
+        return [self.input().path, self.output().path]
+
+    @property
+    def app(self):
+        return 'aggregate_by_state.py'
+
+
+    def output(self):
+        return luigi.s3.S3Target(self.bucket + '/ufo/etl/aggregated')
+```
+
 ![Esquema del archivo etl.py](images/LuigiETL.png)
 
 Modificamos el archivo de Dockerfile que está en la carpeta producto/ambiente/luigi/luigi_worker
