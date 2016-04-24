@@ -56,7 +56,9 @@ $ sudo docker-compose rm --force luigi_worker
 $ sudo docker-compose build --force-rm --no-cache luigi_worker
 ```
 Solamente levantamos postgres spark y luigi
-```shell docker-compose up -d postgres spark_worker luigid```
+```shell
+docker-compose up -d postgres spark_worker luigid
+```
 
 Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
 
