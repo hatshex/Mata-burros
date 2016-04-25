@@ -52,16 +52,13 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
  - Tener actualizado el repositorio (remoto y origin master)
  - Tener el archivo *.pem, las credenciales de entrada de aws y configurarlas para conectarse (aws config)
  - Tener las llaves generadas de ssh (id_rsa e id_rsa.pub) y haber configurado el ambiente para conectarse a github utilizando ssh.
- - Tener los siguientes archivos en la carpeta producto/ambiente
+ - Tener el siguiente archivo en la carpeta **producto/ambiente**
    * .env
  - Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker**; en la sección de **Clonamos el repositorio** 
-```shell
-   ## Clonamos el repositorio
-   RUN git clone git@github.com:hatshex/data-product-architecture.git
-```
+   * RUN git clone git@github.com:TuUsuario/data-product-architecture.git
  - Tener los siguientes archivos en la carpeta producto/ambiente/docker-images/luigi_worker
-   * .boto
    * dpa_rsa <- es el mismo que el id_rsa, solo hay que renonmbrarlo y copiarlo aquí.
+   * .boto
     ```shell
     [Credentials]
     aws_access_key_id =
@@ -71,7 +68,6 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
     debug = 2
     num_retries = 10
     ```
-
 
 Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
