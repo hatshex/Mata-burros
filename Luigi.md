@@ -62,6 +62,15 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
  - Tener los siguientes archivos en la carpeta **producto/ambiente/docker-images/luigi_worker**
    * dpa_rsa <- es el mismo que el id_rsa, solo hay que renonmbrarlo y copiarlo aquí.
     * .boto
+    ```shell 
+    [Credentials]
+    aws_access_key_id =
+    aws_secret_access_key = 
+    
+    [Boto]
+    debug = 2
+    num_retries = 10
+     ```
 
 Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
@@ -79,9 +88,7 @@ docker-compose up -d postgres spark_worker luigid
 ```
 
 # Ahhh y cómo se puede probar?? cómo debuggeamos?
-* Verificamos que tengamos los siguientes archivos:
 * Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
-
 * Ejecutar el contenedor de luigi
 * Actualizamos el repo
 * Levantamos spark
