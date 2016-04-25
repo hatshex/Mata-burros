@@ -53,7 +53,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
  - Tener el archivo *.pem, las credenciales de entrada de aws y configurarlas para conectarse (aws config)
  - Tener las llaves generadas de ssh (id_rsa e id_rsa.pub) y haber configurado el ambiente para conectarse a github utilizando ssh.
  - Tener los siguientes archivos en la carpeta producto/ambiente/docker-images/luigi_worker
-  + .boto
+   + .boto
    ```shell
    [Credentials]
    aws_access_key_id =
@@ -63,7 +63,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
    debug = 2
    num_retries = 10
    ```
-  + dpa_rsa <- es el mismo que el id_rsa, solo hay que renonmbrarlo y copiarlo aquí.
+   + dpa_rsa <- es el mismo que el id_rsa, solo hay que renonmbrarlo y copiarlo aquí.
  - Tener los siguientes archivos en la carpeta producto/ambiente
   + .env
  - Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker** En la sección de ** ## Clonamos el repositorio ** 
