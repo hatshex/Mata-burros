@@ -53,9 +53,10 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
  - Tener el archivo *.pem para conectarse a aws.
  - Tener los archivos id_rsa e id_rsa.pub y haber configurado el ambiente para conectarse a github utilizando ssh.
  - Tener los siguientes archivos en la carpeta producto/ambiente/docker-images/luigi_worker
-  ~ .boto
-  ~ .env
-  ~ dpa_rsa
+   - .boto
+   - .env
+   - dpa_rsa
+
 Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
 $ sudo docker-compose build
