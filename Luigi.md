@@ -72,7 +72,7 @@ Solamente levantamos postgres spark y luigi
 docker-compose up -d postgres spark_worker luigid
 ```
 
-*Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker** En la sección de **_Clobamos el repositorio**_ 
+Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker** En la sección de **_ Clonamos el repositorio _** 
 ```shell
 ## Clonamos el repositorio
 RUN git clone git@github.com:hatshex/data-product-architecture.git
