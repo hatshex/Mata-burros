@@ -50,12 +50,27 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
 * Prerrequisitos
  - Tener instalados docker, docker-compose y git( clonado github.com/ITAM-DS/data-product-architecture.git)
  - Tener actualizado el repositorio (remoto y origin master)
- - Tener el archivo *.pem para conectarse a aws.
- - Tener los archivos id_rsa e id_rsa.pub y haber configurado el ambiente para conectarse a github utilizando ssh.
+ - Tener el archivo *.pem, las credenciales de entrada de aws y configurarlas para conectarse (aws config)
+ - Tener las llaves generadas de ssh (id_rsa e id_rsa.pub) y haber configurado el ambiente para conectarse a github utilizando ssh.
  - Tener los siguientes archivos en la carpeta producto/ambiente/docker-images/luigi_worker
-   - .boto
-   - .env
-   - dpa_rsa
+  + .boto
+   ```shell
+   [Credentials]
+   aws_access_key_id =
+   aws_secret_access_key = 
+   
+   [Boto]
+   debug = 2
+   num_retries = 10
+   ```
+  + dpa_rsa <- es el mismo que el id_rsa, solo hay que renonmbrarlo y copiarlo aquí.
+ - Tener los siguientes archivos en la carpeta producto/ambiente
+  + .env
+ - Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker** En la sección de ** ## Clonamos el repositorio ** 
+```shell
+## Clonamos el repositorio
+RUN git clone git@github.com:hatshex/data-product-architecture.git
+```
 
 Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
@@ -72,11 +87,6 @@ Solamente levantamos postgres spark y luigi
 docker-compose up -d postgres spark_worker luigid
 ```
 
-Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker** En la sección de **_ Clonamos el repositorio _** 
-```shell
-## Clonamos el repositorio
-RUN git clone git@github.com:hatshex/data-product-architecture.git
-```
 # Ahhh y cómo se puede probar?? cómo debuggeamos?
 * Verificamos que tengamos los siguientes archivos:
 * Dentro de Luigi_worker, si queremos probar los archivos .py que utilizan pyspark
