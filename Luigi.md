@@ -71,8 +71,10 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
     debug = 2
     num_retries = 10
      ```
+# Así quedaría nuestro ambiente
 ![Esquema del docker-compose etl.py](images/docker-comoseLuigi.png)
-Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
+
+#Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
 $ sudo docker-compose build
 $ sudo docker-compose up -d postgres spark_worker luigid
