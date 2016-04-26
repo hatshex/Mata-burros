@@ -47,6 +47,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
 ![Esquema del archivo etl.py](images/LuigiETL.png)
 
 #Ambiente para luigi
+![Esquema del docker-compose etl.py](images/docker-comoseLuigi.png)
 * Prerrequisitos
  - Tener instalados docker, docker-compose y git( clonado github.com/ITAM-DS/data-product-architecture.git)
  - Tener actualizado el repositorio (remoto y origin master)
