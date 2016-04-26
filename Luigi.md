@@ -54,6 +54,18 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
  - Tener las llaves generadas de ssh (id_rsa e id_rsa.pub) y haber configurado el ambiente para conectarse a github utilizando ssh.
  - Tener el siguiente archivo en la carpeta **producto/ambiente**
    * .env
+   ```shell
+   ## PostgreSQL
+   LC_ALL=C.UTF-8
+   POSTGRES_DB=***
+   POSTGRES_USER=***
+   POSTGRES_PASSWORD=***
+   PGDATA=/data/db/data
+
+  ##  AWS
+  AWS_ACCESS_KEY_ID = ****
+  AWS_SECRET_ACCESS_KEY=****
+```
  - Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker**; 
   ```shell  
   ##Clonamos el repositorio
