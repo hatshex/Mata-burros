@@ -47,7 +47,6 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
 ![Esquema del archivo etl.py](images/LuigiETL.png)
 
 #Ambiente para luigi
-![Esquema del docker-compose etl.py](images/docker-comoseLuigi.png)
 * Prerrequisitos
  - Tener instalados docker, docker-compose y git( clonado github.com/ITAM-DS/data-product-architecture.git)
  - Tener actualizado el repositorio (remoto y origin master)
@@ -72,7 +71,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
     debug = 2
     num_retries = 10
      ```
-
+![Esquema del docker-compose etl.py](images/docker-comoseLuigi.png)
 Y cómo lo corremos? dónde se ejecuta? Si es la primera vez que se levanta el ambiente, ir a la carpeta **producto/ambiente** ejecutar
 ```shell
 $ sudo docker-compose build
