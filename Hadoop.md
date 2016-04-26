@@ -9,7 +9,7 @@ $ docker pull nanounanue/hadoop-pseudo
 Ejecutamos el contenedor
 ```shell
 $ docker run -ti --name hadoop-pseudo \
-  -v /ruta/a/tus/datos/:/home/itam/data \
+  -v /home/hatshex/proyectos/dpa/data-product-architecture/alumnos/hatshex/flume/data/:/home/itam/data \
   -p 2122:2122 -p 2181:2181 -p 39534:39534 -p 9000:9000 \
   -p 50070:50070 -p 50010:50010 -p 50020:50020 -p 50075:50075 \
   -p 50090:50090 -p 8030:8030 -p 8031:8031 -p 8032:8032 \
