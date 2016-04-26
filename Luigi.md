@@ -49,6 +49,10 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
 #Ambiente para luigi
 * Prerrequisitos
  - Tener instalados docker, docker-compose y git( clonado github.com/ITAM-DS/data-product-architecture.git)
+ - Tener la imagen dpa/base hay que generarla desde la carpeta /producto/ambiente/docker-images/base
+  ```shell 
+     $ docker build --tag dpa/base .   
+     ```
  - Tener actualizado el repositorio (remoto y origin master)
  - Tener el archivo *.pem, las credenciales de entrada de aws y configurarlas para conectarse (aws config)
  - Tener las llaves generadas de ssh (id_rsa e id_rsa.pub) y haber configurado el ambiente para conectarse a github utilizando ssh.
