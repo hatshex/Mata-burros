@@ -130,5 +130,5 @@ Ah... pero y cómo sabemos que Luigi también está funcionando???
 * Salimos de spark Ctrl + c
 * python -m luigi --module **nombre del archivo con el etl** **Clase que queremos probar**
 ```zsh
-$ python -m luigi --module etl ReadUFOS
+$ python -m luigi --module etl ReadUFOs
 ```
