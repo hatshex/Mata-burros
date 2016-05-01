@@ -50,3 +50,9 @@ Ejecutar impala o hive (para que la gente investigue en el dataset sin ser cient
 ```shell
 impala-shell
 ```
+# Flume
+Una vez que iniciamos el contenedor, nos firmamos con el usuario itam
+```shell
+$ sudo su itam
+```
+Vamos a la carpeta de data y creamos la carpeta ingesta
