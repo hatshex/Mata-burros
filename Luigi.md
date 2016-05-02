@@ -136,3 +136,7 @@ Ah... pero y cómo sabemos que Luigi también está funcionando???
 ```zsh
 $ python -m luigi --module etl ReadUFOs
 ```
+* Si queremos probar todo el flujo
+```zsh
+$ python -m luigi --module etl AllTask
+```
