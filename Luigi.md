@@ -67,7 +67,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
    PGDATA=/data/db/data
 
   ##  AWS
-  AWS_ACCESS_KEY_ID = ****
+  AWS_ACCESS_KEY = ****
   AWS_SECRET_ACCESS_KEY=****
 ```
  - Modificamos el archivo de Dockerfile que está en la carpeta **producto/ambiente/docker-images/luigi_worker**; 
