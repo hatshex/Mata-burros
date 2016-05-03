@@ -87,7 +87,7 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
     debug = 2
     num_retries = 10
      ```
- - El archivo luigi.conf es el que utilizamos para configurar nuestro etl
+ - El archivo **luigi.cfg** es el que utilizamos para configurar nuestro etl
  ```shell 
  [core]
  default-scheduler-host: luigid
