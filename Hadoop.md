@@ -57,3 +57,15 @@ $ sudo su itam
 ```
 Vamos a la carpeta de data y creamos la carpeta ingesta
 A partir de la versión 1.6 ya tiene la librería para conectarse con Twitter
+
+Las librerías se encuentran en:
+```shell
+/usr/lib/kite
+/usr/lib/flume-ng
+
+sudo ln -s /usr/lib/kite/kite-morphlines-* /usr/lib/flume-ng/lib
+sudo ln -s /usr/lib/kite/lib/metrics* /usr/lib/flume-ng/lib
+sudo ln -s /usr/lib/kite/lib/config-1.0.2.jar /usr/lib/flume-ng/lib
+sudo ln -s /usr/lib/kite/lib/Saxon-HE-9.5.1-5.jar /usr/lib/flume-ng/lib
+sudo ln -s /usr/lib/kite/lib/tika-* /usr/lib/flume-ng/lib
+```
