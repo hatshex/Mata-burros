@@ -87,29 +87,29 @@ En Luigi tenemos que pensar al revés... empezamos por el resultado, programamos
     debug = 2
     num_retries = 10
      ```
-  - El archivo luigi.conf es el que utilizamos para configurar nuestro etl
+ - El archivo luigi.conf es el que utilizamos para configurar nuestro etl
       ```shell 
-[core]
-default-scheduler-host: luigid
-default-scheduler-port: 8082
-max-reschedules: 3
-logging_conf_file: dpa_logging.conf
+    [core]
+    default-scheduler-host: luigid
+    default-scheduler-port: 8082
+    max-reschedules: 3
+    logging_conf_file: dpa_logging.conf
 
-[spark]
-spark-submit: /usr/spark-1.6.0-bin-hadoop2.6/bin/spark-submit
-master: spark://master:7077
-deploy-model: cluster
-packages: com.amazonaws:aws-java-sdk-pom:1.10.34,org.apache.hadoop:hadoop-aws:2.6.0,com.databricks:spark-csv_2.11:1.4.0
-
-[dpadb]
-host: postgres
-database: dpa
-user: ***
-password: ***
-
-[etl]
-bucket: s3n://mybucket
-top10_table: top10_by_state
+   [spark]
+   spark-submit: /usr/spark-1.6.0-bin-hadoop2.6/bin/spark-submit
+   master: spark://master:7077
+   deploy-model: cluster
+   packages: com.amazonaws:aws-java-sdk-pom:1.10.34,org.apache.hadoop:hadoop-aws:2.6.0,com.databricks:spark-csv_2.11:1.4.0
+   
+   [dpadb]
+   host: postgres
+   database: dpa
+   user: ***
+   password: ***
+   
+   [etl]
+   bucket: s3n://mybucket
+   top10_table: top10_by_state
      ```
 # Así quedaría nuestro ambiente
 ![Esquema del docker-compose etl.py](images/docker-comoseLuigi.png)
