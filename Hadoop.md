@@ -69,3 +69,4 @@ sudo ln -s /usr/lib/kite/lib/config-1.0.2.jar /usr/lib/flume-ng/lib
 sudo ln -s /usr/lib/kite/lib/Saxon-HE-9.5.1-5.jar /usr/lib/flume-ng/lib
 sudo ln -s /usr/lib/kite/lib/tika-* /usr/lib/flume-ng/lib
 ```
+![Arquitectura K](images/ArquitecturaK.png)
