@@ -56,3 +56,4 @@ Una vez que iniciamos el contenedor, nos firmamos con el usuario itam
 $ sudo su itam
 ```
 Vamos a la carpeta de data y creamos la carpeta ingesta
+A partir de la versión 1.6 ya tiene la librería para conectarse con Twitter
