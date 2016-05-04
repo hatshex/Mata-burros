@@ -1,2 +1,2 @@
-# Tumba-burros
+# Mata-burros
 Tutoriales y mas
