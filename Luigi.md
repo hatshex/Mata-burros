@@ -164,3 +164,21 @@ $ python -m luigi --module etl ReadUFOs
 ```zsh
 $ python -m luigi --module etl AllTask
 ```
+
+#Errores comunes?
+¿¿¿¿existe la base de datos???
+````shell
+$ docker exec -it ambiente_postgres_1 /bin/bash
+
+$ psql -h 0.0.0.0:5432 -U dpa-user -d dpa -p dpa-test
+```
+Si no existe la bd la creamos, y tmb la tabla
+```shell
+create database dpa;
+\c dpa;
+
+create table top10_by_state (
+estado varchar(255), 
+total int
+  );
+```
