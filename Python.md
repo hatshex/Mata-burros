@@ -23,4 +23,9 @@ IPython Notebook utiliza [Markdown](http://daringfireball.net/projects/markdown/
 Algunos tutoriales:
 * http://opentechschool.github.io/python-data-intro/core/notebook.html
 * https://www.codementor.io/python/tutorial
-* https://www.codecademy.com/learn/python
+* https://www.codecademy.com/learn/pythonP
+
+Para instalar librerías
+```
+conda install -c anaconda gensim=0.12.4
+```
