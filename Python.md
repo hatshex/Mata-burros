@@ -15,10 +15,14 @@ conda update anaconda
 Una vez instalado y/o actualizado Anaconda, utilizaremos IPython Notebook:
 * En el menú de inicio, buscamos y seleccionamos el programa Launcher, nos desplegará una ventana con varios IDE's, en nuestro caso utilizaremos ipython-notebook
 * También podemos ejecutarlo desde la línea de comandos (no olvides correrlo con permisos de Administrador)
+* Versión anterior a anaconda 4
 ```
 ipython notebook
 ```
-
+* Versión actual
+```
+jupyter notebook
+```
 IPython Notebook utiliza [Markdown](http://daringfireball.net/projects/markdown/syntax)
 Algunos tutoriales:
 * http://opentechschool.github.io/python-data-intro/core/notebook.html
