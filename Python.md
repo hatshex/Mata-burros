@@ -33,3 +33,11 @@ Para instalar librerías
 ```
 conda install -c anaconda gensim=0.12.4
 ```
+
+Cuando no encuentres una librería de python 3.5* para windows, revisa la url [http://www.lfd.uci.edu/~gohlke/pythonlibs]
+* Descarga el archivo Paquete*.whl en tu equipo local
+* Abre una ventana de línea de comandos
+* Ejecuta la siguiente instrucción
+```
+> pip install C:\basemap-1.0.8-cp35-none-win_amd64.whl 
+ ```
