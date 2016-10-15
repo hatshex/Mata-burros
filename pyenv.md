@@ -2,7 +2,7 @@
 ¿Alguna vez te has enfrentado al problema de tener instaladas las versiones 2.7 y 3.5 de python?, la forma mas sencilla de hacerlo para **Ubuntu** es instalar pyenv.
 
 ### 1.- Pre requisitos
-```
+``` shell
 sudo apt-get update 
 sudo apt-get upgrade
 ## En caso de que no esté instalado git
