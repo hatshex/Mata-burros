@@ -1,3 +1,11 @@
+#!/bin/bash
+# ********************************* By hatshex *******************************
+# Pre-requisitos, el archivo debe tener permisos de ejecución, en caso de que no: sudo chmod +x dockerinstall.sh
+# Ejemplos de ejecución: 
+# sudo ./dockerinstall.sh 
+# ********************************* By hatshex *******************************
+
+
 sudo apt-get update 
 sudo apt-get install apt-transport-https ca-certificates
 
