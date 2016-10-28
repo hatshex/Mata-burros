@@ -1,0 +1,9 @@
+jupyter
+pandas
+numpy
+bokeh
+matplotlib
+scipy
+seaborn
+scikit-learn
+awscli
