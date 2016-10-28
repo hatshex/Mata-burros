@@ -29,11 +29,11 @@ $ pyenv versions
 ```
 ### 4.- Instalamos la versión que requerimos, en este caso la 3.5.2
 
-```
+``` shell
 $ pyenv install 3.5.2
 ```
 ### 5.- Revisamos la versión
-```
+``` shell
 $pyenv versions
 system
 * 3.5.2 (set by /home/hatshex/proyectos/programming-for-ds/.python-version)
@@ -41,7 +41,7 @@ system
 ```
 
 ### 6.- Declaramos que la versión global sea la 3.5.2
-```
+``` shell
 pyenv global 3.4.0
 ```
 
