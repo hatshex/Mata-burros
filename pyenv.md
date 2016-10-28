@@ -46,7 +46,7 @@ pyenv global 3.4.0
 ```
 
 ### 7.- Funcionó???
-Ubuntu instala por default la versión 2.7 de python, si tu haces un `pip install ipython` en cualquier parte, descargará el ipython para la versión 2.7.
+#### a)Ubuntu instala por default la versión 2.7 de python, si tu haces un `pip install ipython` en cualquier parte, descargará el ipython para la versión 2.7.
 
 ``` python
 hatshex@infernomundo:~/proyectos$ pwd
@@ -65,7 +65,7 @@ In [1]:
 
 ```
 
-Ahora, crea una carpeta **programming-for-ds** y crea el archivo **.python-version** con tu editor preferido, en mi caso utilizaré nano
+#### b)Ahora, crea una carpeta **programming-for-ds** y crea el archivo **.python-version** con tu editor preferido, en mi caso utilizaré nano
 ```  shell
 nano .python-version
 ```
