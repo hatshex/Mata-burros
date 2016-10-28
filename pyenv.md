@@ -47,7 +47,8 @@ pyenv global 3.4.0
 
 ### 7.- Funcionó???
 Ubuntu instala por default la versión 2.7 de python, si tu haces un `pip install ipython` en cualquier parte, descargará el ipython para la versión 2.7.
-```
+
+``` python
 hatshex@infernomundo:~/proyectos$ pwd
 /home/hatshex/proyectos
 hatshex@infernomundo:~/proyectos$ ipython
@@ -65,19 +66,21 @@ In [1]:
 ```
 
 Ahora, crea una carpeta **programming-for-ds** y crea el archivo **.python-version** con tu editor preferido, en mi caso utilizaré nano
-```
+```  shell
 nano .python-version
 ```
 el cuál solamente tendrá la versión de python que quiero utilizar en esa carpeta
-```
+```  shell
 3.5.2
 ```
 Ahora dentro de esa carpeta **programming-for-ds** ejecuta
-`pip install ipython`
+```  shell
+pip install ipython
+```
 
 una vez que termine, ejecutas el comando `ipython` y verás que la versión que toma es la 3.5.2
 
-```
+``` python
 programming-for-ds$ ipython
 Python 3.5.2 (default, Oct 28 2016, 13:10:43) 
 Type "copyright", "credits" or "license" for more information.
