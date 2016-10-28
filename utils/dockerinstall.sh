@@ -1,5 +1,6 @@
 #!/bin/bash
 # ********************************* By hatshex *******************************
+# Script que instala docker en Ubuntu Xenial 16.04 (LTS)
 # Pre-requisitos, el archivo debe tener permisos de ejecución, en caso de que no: sudo chmod +x dockerinstall.sh
 # Ejemplos de ejecución: 
 # sudo ./dockerinstall.sh 
