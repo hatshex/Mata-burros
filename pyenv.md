@@ -42,7 +42,7 @@ system
 
 ### 6.- Declaramos que la versión global sea la 3.5.2
 ``` shell
-pyenv global 3.4.0
+pyenv global 3.5.2
 ```
 
 ### 7.- Funcionó???
