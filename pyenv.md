@@ -20,6 +20,16 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 ```
+### 2.1.- Descargamos y configuramos variables de ambiente para zsh 
+``` zsh
+cd
+git clone git://github.com/yyuu/pyenv.git .pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+source ~/.zshrc
+```
+
 ### 3.- Revisamos
 ```shell
 $ pyenv global
