@@ -117,7 +117,7 @@ tr '"' ' ' > instancias
 ```
 * Conectándote a tu máquina ec2 desde ssh 
 ```shell
-$ ssh -i ~/.ssh/key.pem ec2-54-201-99-166.us-west-2.compute.amazonaws.com
+$ ssh -i ~/.ssh/key.pem ec2-user@ec2-54-201-99-166.us-west-2.compute.amazonaws.com
 ```
 **_ El parámetro ec2-54-201-99-166.us-west-2.compute.amazonaws.com es el Public DNS_**
 * Ahora si... estamos dentro de nuestra ec2
