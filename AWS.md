@@ -50,7 +50,8 @@ Desplegará el manual del comando aws, para salir le ponen q
 ### Agregamos roles y permisos [Access Management](http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html)
 * Clic en el usuario
 * Clic pestaña permissions
-* Clic en Attach Policy
+* Clic en Attach Policy, por ejemplo:
+    - AmazonEC2FullAccess
 * Seleccionas tantos permisos necesites y clic en Attach Policy
 * Ya tenemos el usuario listo.
 
@@ -117,7 +118,7 @@ tr '"' ' ' > instancias
 ```
 * Conectándote a tu máquina ec2 desde ssh 
 ```shell
-$ ssh -i ~/.ssh/key.pem ec2-user@ec2-54-201-99-166.us-west-2.compute.amazonaws.com
+$ ssh -i ~/.ssh/key.pem ubuntu@ec2-54-201-99-166.us-west-2.compute.amazonaws.com
 ```
 **_ El parámetro ec2-54-201-99-166.us-west-2.compute.amazonaws.com es el Public DNS_**
 * Ahora si... estamos dentro de nuestra ec2
