@@ -83,9 +83,9 @@ Default output format [None]: json
 * Una vez configurado el aws cli, movemos el archivo .pem a la carpeta ~/.ssh y le cambiamos los permisos. Si no existe la carpeta hay que crearla.... la expresión ~/ se refiere a la carpeta de tu usuario.
 
 ``` shell
-$ mkdir /home/hatshex/.ssh
-$ mv /home/hatshex/key.pem /home/hatshex/.ssh
-$ chmod 4000 key.pem
+$ sudo mkdir /home/hatshex/.ssh
+$ sudo mv /home/hatshex/key.pem /home/hatshex/.ssh
+$ sudo chmod 400 key.pem
 ```
 * Abrimos o creamos el archivo config, dentro de la carpeta ~/.ssh/ y pegamos la siguiente configuración. **Utilizamos el usuario ubuntu, pq es el que se crea por default en la instancia de ec2 que creamos previamente.**
 ```shell
