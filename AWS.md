@@ -23,7 +23,7 @@ $ sudo apt-get install python2.7
 ```shell
 $ sudo curl -O https://bootstrap.pypa.io/get-pip.py
 $ sudo python27 get-pip.py
-sudo pip install awscli
+$ sudo pip install awscli
 ```
 * Ahora si, ya tenemos pip... 
 ```shell
@@ -85,7 +85,7 @@ Default output format [None]: json
 ``` shell
 $ mkdir /home/hatshex/.ssh
 $ mv /home/hatshex/key.pem /home/hatshex/.ssh
-$ chdmod 4000 key.pem
+$ chmod 4000 key.pem
 ```
 * Abrimos o creamos el archivo config, dentro de la carpeta ~/.ssh/ y pegamos la siguiente configuración. **Utilizamos el usuario ubuntu, pq es el que se crea por default en la instancia de ec2 que creamos previamente.**
 ```shell
