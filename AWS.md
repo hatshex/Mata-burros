@@ -171,3 +171,9 @@ $ sudo apt-get install ec2-api-tools
 ```shell 
 $ aws opsworks --region us-east-1 create-instance --stack-id 935450cc-61e0-4b03-a3e0-160ac817d2bb --layer-ids 5c8c272a-f2d5-42e3-8245-5bf3927cb65b --hostname myinstance1 --instance-type m1.large --os "Amazon Linux"
 ```
+
+En caso de que ejecutemos un script y lo mandemos a todas las instancias recordar que tenemos que entrar a las instancias, seleccionar una, en la parte inferior derecha hay una opción 
+* Security groups default. view rules
+Clic en default
+En la siguiente pantalla en la parte inferior, ir a la pestaña Inboud
+Clic en Edit y agregamos el puerto 22
