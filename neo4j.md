@@ -38,6 +38,9 @@ sudo pip install neo4jrestclient
 | Lib | /usr/share/neo4j/lib | Solo Lectura |
 | Plugins | /var/lib/neo4j/plugins | Solo Lectura |
 
+## Para probarlo?
+Ve a cualquier browser que tengas y ve a la ruta http://localhost:7474, el usuario y password iniciales son neo4j/neo4j, se solicitará cambiar el password la primera vez que se ingresa.
+
 ## Bibliografía
 * http://debian.neo4j.org/?_ga=1.80385943.1833551628.1487600906
 * http://neo4j.com/docs/operations-manual/current/configuration/file-locations/
