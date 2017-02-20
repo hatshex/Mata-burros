@@ -27,14 +27,16 @@ sudo pip install neo4jrestclient
 ```
 
 ## Es importante saber las rutas de los archivos de configuración, datos, logs, etc..
-* Configuración /etc/neo4j/neo4j.conf
-* Data /var/lib/neo4j/data
-* Logs /var/log/neo4j
-* Métricas /var/lib/neo4j/metrics
-* Import /var/lib/neo4j/import
-* Bin /usr/share/neo4j/bin
-* Lib /usr/share/neo4j/lib
-* Plugins /var/lib/neo4j/plugins
+| Descripción | Ruta|
+| :---------------:|:-------------:|
+| Configuración | /etc/neo4j/neo4j.conf |
+| Data | /var/lib/neo4j/data |
+| Logs | /var/log/neo4j |
+| Métricas | /var/lib/neo4j/metrics |
+| Import | /var/lib/neo4j/import |
+| Bin | /usr/share/neo4j/bin |
+| Lib | /usr/share/neo4j/lib |
+| Plugins | /var/lib/neo4j/plugins |
 
 ## Bibliografía
 * http://debian.neo4j.org/?_ga=1.80385943.1833551628.1487600906
