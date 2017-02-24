@@ -42,6 +42,8 @@ sudo pip install neo4jrestclient
 ## Para probarlo?
 Ve a cualquier browser que tengas y ve a la [ruta](http://localhost:7474), el usuario y password iniciales son neo4j/neo4j, se solicitará cambiar el password la primera vez que se ingresa.
 
+## Manuales
+* http://guides.neo4j.com/reco/
 ## No olvides tunear tu máquina
 http://neo4j.com/docs/operations-manual/current/performance/
 
