@@ -44,6 +44,8 @@ Ve a cualquier browser que tengas y ve a la [ruta](http://localhost:7474), el us
 
 ## Manuales
 * http://guides.neo4j.com/reco/
+* http://guides.neo4j.com/reco/answers/1.html
+
 ## No olvides tunear tu máquina
 http://neo4j.com/docs/operations-manual/current/performance/
 
