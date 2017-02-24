@@ -33,11 +33,12 @@ sudo pip install neo4jrestclient
 | Data | /var/lib/neo4j/data | Lectura y Escritura |
 | Logs | /var/log/neo4j | Lectura y Escritura |
 | Métricas | /var/lib/neo4j/metrics | Lectura y Escritura |
-| Import | /var/lib/neo4j/import | Solo Lectura |
+| Import | /var/lib/neo4j/import  o /usr/share/neo4j/import*| Solo Lectura |
 | Bin | /usr/share/neo4j/bin | Ejecución |
 | Lib | /usr/share/neo4j/lib | Solo Lectura |
 | Plugins | /var/lib/neo4j/plugins | Solo Lectura |
 
+** Si no existe la carpeta, hay que crearla
 ## Para probarlo?
 Ve a cualquier browser que tengas y ve a la [ruta](http://localhost:7474), el usuario y password iniciales son neo4j/neo4j, se solicitará cambiar el password la primera vez que se ingresa.
 
@@ -45,5 +46,6 @@ Ve a cualquier browser que tengas y ve a la [ruta](http://localhost:7474), el us
 http://neo4j.com/docs/operations-manual/current/performance/
 
 ## Bibliografía
+* http://neo4j.com/docs/cypher-refcard/current/
 * http://debian.neo4j.org/?_ga=1.80385943.1833551628.1487600906
 * http://neo4j.com/docs/operations-manual/current/configuration/file-locations/
