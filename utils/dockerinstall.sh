@@ -15,6 +15,6 @@ echo "deb https://apt.dockerproject.org/repo ubuntu-xenial main" | sudo tee /etc
 sudo apt-get update
 sudo apt-get install linux-image-extra-$(uname -r)
 sudo apt-get update
-sudo apt-get install docker-engine
+sudo apt-get install -Y docker-engine
 service docker start
 systemctl enable docker
