@@ -10,7 +10,7 @@
 git config --global user.name $2
 git config --global user.email $5
 git config --global color.ui "auto"
-git config --global core.editor "emacs"
+git config --global core.editor "nano"
 git init
 git clone https://github.com/$2/$1.git
 cd  $1
