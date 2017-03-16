@@ -1,5 +1,5 @@
 
-sudo apt-get -y zsh
+sudo apt-get install -y zsh
 
 ## Forzamos que el shell del usuario sea zsh
 sudo chsh -s /bin/zsh hatshex
