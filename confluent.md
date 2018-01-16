@@ -1,0 +1,56 @@
+El presente tutorial es para Ubuntu 17.10
+
+Docker Quick Start
+https://docs.confluent.io/current/installation/docker/docs/quickstart.html
+
+# Requerimientos
+  - Git
+  - Docker Engine
+  - Docker Compose
+  - Docker Machine
+  - Virtual Box
+  
+  
+# Crear y configurar Docker Machine
+  ```
+  sudo docker-machine create --driver virtualbox --virtualbox-memory 6000 confluent
+  ```
+  
+  Si todo sale bien, deberás tener una salida como la siguiente:
+  
+  ```
+Running pre-create checks...
+Creating machine...
+(confluent) Copying /home/hatshex/.docker/machine/cache/boot2docker.iso to /home/hatshex/.docker/machine/machines/confluent/boot2docker.iso...
+(confluent) Creating VirtualBox VM...
+(confluent) Creating SSH key...
+(confluent) Starting the VM...
+(confluent) Check network to re-create if needed...
+(confluent) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env confluent
+
+  ```
+  
+  ## Configure your terminal window to attach it to your new Docker Machine
+  ```
+  eval $(docker-machine env confluent)
+  ```
+  Indicando la opción -d los contenedores se iniciarán en segundo plano
+Inicializamos los contenedores, la opción -d nos permite que estén en segundo plano, el archivo que se utiliza para crear los contenedores es el docker-compose.yml
+```
+docker-compose up -d
+ ```
+Para verificar que los servicios estén arriba:
+```
+docker-compose ps
+ ```
