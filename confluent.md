@@ -53,4 +53,77 @@ docker-compose up -d
 Para verificar que los servicios estén arriba:
 ```
 docker-compose ps
+
+                      Name                                     Command               State                           Ports                         
+---------------------------------------------------------------------------------------------------------------------------------------------------
+kafkastreamsexamples_kafka-create-topics_1          bash -c echo Waiting for K ...   Up      9092/tcp                                              
+kafkastreamsexamples_kafka-music-application_1      bash -c echo Waiting for K ...   Up      0.0.0.0:7070->7070/tcp                                
+kafkastreamsexamples_kafka-music-data-generator_1   bash -c echo Waiting for K ...   Up      7070/tcp                                              
+kafkastreamsexamples_kafka_1                        /etc/confluent/docker/run        Up      0.0.0.0:29092->29092/tcp, 0.0.0.0:9092->9092/tcp      
+kafkastreamsexamples_schema-registry_1              /etc/confluent/docker/run        Up      0.0.0.0:8081->8081/tcp                                
+kafkastreamsexamples_zookeeper_1                    /etc/confluent/docker/run        Up      2181/tcp, 2888/tcp, 0.0.0.0:32181->32181/tcp, 3888/tcp
+
+ ```
+ 
+Obtener la IP
+ ```
+ docker-machine ip confluent
+ 192.168.99.101
+
+ 
+  ```
+ Probar instancias
+ ```
+ curl -sXGET  http://192.168.99.101:7070/kafka-music/instances | jq
+ [
+  {
+    "host": "localhost",
+    "port": 7070,
+    "storeNames": [
+      "all-songs",
+      "song-play-count",
+      "top-five-songs",
+      "top-five-songs-by-genre"
+    ]
+  }
+]
+
+ ```
+ 
+ Probar top five
+ ```
+curl -sXGET http://192.168.99.101:7070/kafka-music/charts/top-five | jq
+[
+  {
+    "artist": "Public Enemy",
+    "album": "Fear Of A Black Planet",
+    "name": "911 Is A Joke",
+    "plays": 68
+  },
+  {
+    "artist": "Wheres The Pope?",
+    "album": "PSI",
+    "name": "Fear Of God",
+    "plays": 62
+  },
+  {
+    "artist": "Dead Kennedys",
+    "album": "Fresh Fruit For Rotting Vegetables",
+    "name": "Chemical Warfare",
+    "plays": 59
+  },
+  {
+    "artist": "The Exploited",
+    "album": "Totally Exploited",
+    "name": "Punks Not Dead",
+    "plays": 56
+  },
+  {
+    "artist": "Jello Biafra And The Guantanamo School Of Medicine",
+    "album": "The Audacity Of Hype",
+    "name": "Three Strikes",
+    "plays": 56
+  }
+]
+
  ```
