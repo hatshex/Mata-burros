@@ -6,8 +6,10 @@ sudo gem install ruby-protocol-buffers
 
 
 ## Logstash
+
+Archivo de configuración KafkaProtobuf.conf
+
 ```
-Archivo de configuración
 input {
 	kafka
 	{
