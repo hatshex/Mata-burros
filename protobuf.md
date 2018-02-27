@@ -2,6 +2,11 @@
 ```
 sudo apt-get install libprotobuf-java protobuf-compiler
 sudo gem install ruby-protocol-buffers
+
+
+
+## Correr logstash
+bin/logstash -f config/KafkaProtobuf.conf --config.reload.automatic
 ```
 
 
