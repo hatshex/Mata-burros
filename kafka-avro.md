@@ -1,3 +1,10 @@
+Pre Requisitos
+
+```
+$ pip3 install avro-pyhton3
+$ bin/logstash-plugin install logstash-codec-avro
+```
+
 Crear topicos
 
 ```
