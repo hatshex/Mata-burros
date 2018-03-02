@@ -183,7 +183,7 @@ output {
 
 Ejecutar Logstash
 ```
-bin/logstash -f config/KafkaProtobuf.conf
+bin/logstash -f config/KafkaProtobuf.conf --config.reload.automatic --debug --verbose  
 ```
 
 Ejemplo del json
