@@ -1,18 +1,23 @@
 Pre Requisitos
+ - Python 3
+ - [Logstash 6.2.2](https://www.elastic.co/downloads/logstash), descargar el archivo y descomprimirlo.
+ - [Confluent 4](https://www.confluent.io/download/), descargar el archivo y descomprimirlo
 
 ```
-$ pip3 install avro-pyhton3
-$ bin/logstash-plugin install logstash-codec-avro
+$ pip3 install avro-pyhton3 avro
+$ /home/hatshex/confluent/bin/confluent start
+$ /home/hatshex/logstash/bin/logstash-plugin install logstash-codec-avro
 ```
 
-Crear topicos
+Crear topicos en kafka
 
 ```
 /home/hatshex/confluent/bin/kafka-topics --zookeeper localhost:2181 --create --topic AvroInput --partitions 1 --replication-factor 1 
 
 /home/hatshex/confluent/bin/kafka-topics --zookeeper localhost:2181 --create --topic AvroOutput --partitions 1 --replication-factor 1 
 ```
-user.avsc
+
+Definición del esquema del mensaje, archivo `user.avsc`
 ```
 {
 	"namespace": "example.avro",
@@ -88,7 +93,7 @@ input {
      #auto_offset_reset => "earliest"
      auto_offset_reset => "latest"
      codec => avro {
-        schema_uri => "/home/hatshex/Proyectos/CFDI/python-kafka-avro/user.avsc"
+        schema_uri => "/home/hatshex/python-kafka-avro/user.avsc"
     	}
 
     }
