@@ -6,7 +6,6 @@ $ java -version
 java version "1.8.0_171"
 Java(TM) SE Runtime Environment (build 1.8.0_171-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 25.171-b11, mixed mode)
-
 ```
 ### Instalación de Apache Spark
   - Descargar el instalador en la página `http://spark.apache.org/downloads.html`
@@ -69,3 +68,10 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
  ```
 $ pyspark
  ```
+ 
+ #### Bibliografía
+ - https://medium.com/@GalarnykMichael/install-spark-on-ubuntu-pyspark-231c45677de0
+ - https://blog.sicara.com/get-started-pyspark-jupyter-guide-tutorial-ae2fe84f594f
+ - https://www.dezyre.com/apache-spark-tutorial/apache-spark-installation-tutorial
+ - https://www.quora.com/How-do-you-install-Apache-Spark
+ - https://data-flair.training/blogs/apache-spark-installation-on-ubuntu/
