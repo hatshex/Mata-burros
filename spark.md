@@ -65,3 +65,7 @@ export PATH=$SPARK_HOME/bin:$PATH
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 ```
+  - Cerrar y abrir la terminal, y ejecutar el siguiente comando
+ ```
+$ pyspark
+ ```
