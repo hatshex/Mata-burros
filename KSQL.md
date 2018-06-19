@@ -1,7 +1,7 @@
 * Bajar confluent
 * Bajar logstash
 * Inicializamos Confluent
-```
+``` shell
 $ /home/hatshex/confluent-oss/bin/confluent start
 ```
 * Creamos tópicos
@@ -50,13 +50,13 @@ stdout{ codec=> rubydebug}
 ```
 
 * Ejecutamos logstash
-```
+``` shell
 $ /home/hatshex/logstash/bin/logstash -f config/logstashcatalogos.conf
 $ /home/hatshex/logstash/bin/logstash -f config/logstashfacturas.conf
 ```
 
 * Entrar al cliente del KSQL
-```
+``` shell
 /home/hatshex/confluent/bin/ksql
 ```
 
