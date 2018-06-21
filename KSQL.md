@@ -132,3 +132,4 @@ ksql> SHOW topics;
 - https://docs.confluent.io/current/ksql/docs/syntax-reference.html
 - https://www.confluent.io/blog/secure-stream-processing-apache-kafka-ksql/
 - https://docs.confluent.io/current/ksql/docs/installation/server-config/avro-schema.html
+- https://www.rittmanmead.com/blog/2017/10/ksql-streaming-sql-for-apache-kafka/
