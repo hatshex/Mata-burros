@@ -28,4 +28,6 @@ ssh -L 8083:localhost:8080 -N user3@servidor3
 
 
 ## Terminar procesos usando ps
+``` shell
 ps ux|grep <process name>|awk '{print $2}'|xargs -n 1 kill
+```
