@@ -25,3 +25,7 @@ ssh -L 8083:localhost:8083 user1@servidor1
 ssh -L 8083:localhost:8083 user2@servidor2			
 ssh -L 8083:localhost:8080 -N user3@servidor3
 ```
+
+
+## Terminar procesos usando ps
+ps ux|grep <process name>|awk '{print $2}'|xargs -n 1 kill
