@@ -19,3 +19,4 @@ sudo  docker run -it --rm -p 8888:8888 -v /hatshex/proyectos:/home/jovyan/work -
   + sudo docker exec -it spark /bin/bash
     - pip install nltk
     - python -m nltk.downloader stopwords
+    - python -m nltk.downloader punkt 
