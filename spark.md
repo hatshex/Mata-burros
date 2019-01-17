@@ -75,3 +75,4 @@ $ pyspark
  - https://www.dezyre.com/apache-spark-tutorial/apache-spark-installation-tutorial
  - https://www.quora.com/How-do-you-install-Apache-Spark
  - https://data-flair.training/blogs/apache-spark-installation-on-ubuntu/
+ - https://datawookie.netlify.com/blog/2017/07/installing-spark-on-ubuntu/
