@@ -1,7 +1,7 @@
 
 ## SCP - Download information
 ``` shell
-scp dinger@13.66.58.166:/home/dinger/muestrajson_20180517.json ./
+scp user@192.168.1.1:/home/user/muestrajson_20180517.json ./
 ```
 ## VIM in Ex mode - Delete first row
 ``` shell
